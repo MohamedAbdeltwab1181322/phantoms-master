@@ -1,0 +1,74 @@
+@import "../../styles/mixins";
+@import "../../styles/colors";
+
+footer {
+  padding: 80px 3vw;
+  padding-bottom: 50px;
+  background-color: #222;
+  @include Hero("dark");
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    &.center {
+      align-items: center;
+    }
+  }
+  .about,
+  .contact,
+  .follow {
+    @media (max-width: 1024px) {
+      flex: auto;
+    }
+    flex: 1;
+    text-align: left;
+    margin: 20px 50px;
+    h4.title {
+      font-family: "Oswald";
+      margin-bottom: 30px;
+    }
+  }
+
+  .contact {
+    .methods {
+      .ico {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .follow {
+    .newsletter {
+      input {
+        width: 100%;
+        padding: 10px 0;
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid gray;
+        font-size: 14px;
+        color: white;
+        margin-bottom: 20px;
+      }
+      .btn {
+        margin: 20px 0;
+      }
+    }
+    .socials {
+      .content {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+  hr {
+    border-color: lightgray;
+    border-bottom-style: none;
+    margin: 50px auto;
+    max-width: 90%;
+  }
+  .copyrights {
+    text-align: left;
+    margin-left: 50px;
+  }
+}

@@ -1,0 +1,22 @@
+@import "../../styles/mixins";
+
+section.events {
+  position: relative;
+
+  @include Hero();
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: left;
+  }
+  .section-title {
+    position: absolute;
+    top: 20px;
+    left: 25%;
+  }
+  h3.title {
+    font-family: "Oswald";
+    margin: 50px 0;
+  }
+}

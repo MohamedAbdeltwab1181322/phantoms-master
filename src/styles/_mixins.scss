@@ -1,0 +1,151 @@
+@import "./colors";
+
+@mixin Hero($theme: "light") {
+  @if ($theme == "dark") {
+    color: white;
+  } @else {
+    color: $dark;
+  }
+
+  .colored {
+    color: $primary;
+  }
+
+  @include Headings();
+  @include Heros();
+}
+
+@mixin Headings {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+  }
+  h1 {
+    font-size: 50px;
+    line-height: 0.925;
+    @media (min-width: 768px) {
+      font-size: 48px;
+    }
+    @media (min-width: 1200px) {
+      font-size: 60px;
+    }
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 1.45833;
+    @media (min-width: 768px) {
+      font-size: 38.4px;
+    }
+    @media (min-width: 1200px) {
+      font-size: 48px;
+    }
+  }
+  h3 {
+    font-size: 24px;
+    line-height: 1.33333;
+    @media (min-width: 576px) {
+      font-size: 36px;
+    }
+  }
+  h4 {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+  h5 {
+    font-size: 18px;
+    line-height: 1.66667;
+  }
+  sub {
+    font-size: 14px;
+    line-height: 1.21429;
+    //   overrides
+    font-weight: 300;
+    color: $primary;
+    letter-spacing: 0.5em;
+  }
+  p {
+    font-size: 14px;
+    line-height: 2.07143;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+  }
+}
+
+@mixin Heros {
+  .hero1 {
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 0.925;
+    @media (min-width: 576px) {
+      font-size: 75px;
+    }
+    @media (min-width: 992px) {
+      font-size: 100px;
+    }
+    @media (min-width: 1200px) {
+      font-size: 144px;
+    }
+  }
+  .hero2 {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1;
+    @media (min-width: 576px) {
+      font-size: 70px;
+    }
+    @media (min-width: 992px) {
+      font-size: 80px;
+    }
+    @media (min-width: 1200px) {
+      font-size: 96px;
+    }
+  }
+
+  .hero3 {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 0.91;
+    @media (min-width: 576px) {
+      font-size: 40px;
+    }
+    @media (min-width: 992px) {
+      font-size: 50px;
+    }
+    @media (min-width: 1200px) {
+      font-size: 64px;
+    }
+  }
+
+  .hero4 {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1;
+  }
+
+  .section-title {
+    font-size: 260px;
+    text-transform: uppercase;
+    color: #f6f6f6;
+    font-family: "Oswald";
+    z-index: -1;
+    letter-spacing: 0;
+    font-weight: 900;
+
+    @media (max-width: 576px) {
+      font-size: 90px;
+    }
+    @media (max-width: 992px) {
+      font-size: 150px;
+    }
+    @media (max-width: 1200px) {
+      font-size: 200px;
+    }
+  }
+}

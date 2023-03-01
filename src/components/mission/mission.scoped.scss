@@ -1,0 +1,54 @@
+@import "../../styles/mixins";
+
+.mission {
+  max-width: 300px;
+
+  @include Hero();
+
+  &:hover {
+    .ico {
+      color: white;
+    }
+    .ico::after {
+      transform: scale(1);
+      transform-origin: center;
+    }
+  }
+  .ico::after {
+    content: "";
+    position: absolute;
+    top: -22px;
+    left: 36.5%;
+    width: 80px;
+    height: 80px;
+    transform: scale(0);
+    border-radius: 40px;
+    background: #fa311f;
+    transition: all 200ms ease;
+    z-index: -1;
+  }
+
+  .ico,
+  .title,
+  .desc {
+    margin: 10px 0;
+  }
+  .ico {
+    position: relative;
+    margin: 30px auto;
+    display: flex;
+  }
+
+  .ico i {
+    width: fit-content;
+    font-size: 36px;
+    margin: auto;
+  }
+  .title h5 {
+    font-family: "Oswald";
+    letter-spacing: 0.1em;
+  }
+  .desc p {
+    line-height: 1.6;
+  }
+}

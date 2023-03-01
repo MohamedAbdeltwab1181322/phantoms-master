@@ -1,0 +1,46 @@
+@import "./styles/mixins";
+
+.App {
+  text-align: center;
+}
+
+q::before,
+q::after {
+  content: "";
+}
+
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  a {
+    color: white;
+  }
+}
+
+a,
+img {
+  display: block;
+}
+
+* {
+  outline: none;
+}
+
+section {
+  padding: 80px 12vw;
+}
+
+.App {
+  overflow: hidden;
+}

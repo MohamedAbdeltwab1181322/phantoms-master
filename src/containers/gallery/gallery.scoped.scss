@@ -1,0 +1,29 @@
+@import "../../styles/mixins";
+
+section.gallery {
+  position: relative;
+  padding: 80px 60px;
+
+  @include Hero();
+
+  .section-title {
+    position: absolute;
+    top: -140px;
+    right: 0px;
+    z-index: -1;
+  }
+
+  .pics {
+    .row0 {
+      align-items: baseline;
+    }
+    .row1 {
+      justify-content: flex-end;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}

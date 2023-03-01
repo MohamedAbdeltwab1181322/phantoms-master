@@ -1,0 +1,61 @@
+@import "../../styles/mixins";
+
+section.season {
+  background: url("../../assets/pics/home03.jpg");
+  background-size: cover;
+  background-position: right;
+  height: 350px;
+  display: flex;
+
+  @include Hero("dark");
+
+  .content {
+    max-width: 60%;
+    margin: auto 0;
+    @media (max-width: 425px) {
+      margin: auto;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .btn {
+      margin-top: 20px;
+    }
+
+    p,
+    h1,
+    h3 {
+      text-align: left;
+      font-family: "Oswald";
+      margin: 5px 10px;
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      p.small {
+        font-family: "Montserrat";
+        text-transform: capitalize;
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 1;
+      }
+
+      h1 {
+        text-transform: uppercase;
+        letter-spacing: 0;
+      }
+      h3 {
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+    }
+    h1.colored {
+      line-height: 1;
+      letter-spacing: 0.1em;
+    }
+  }
+}

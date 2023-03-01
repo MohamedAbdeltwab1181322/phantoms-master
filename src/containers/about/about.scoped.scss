@@ -1,0 +1,54 @@
+@import "../../styles/mixins";
+
+section.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  @include Hero();
+
+  .title,
+  .content {
+    flex: 1;
+    margin: auto;
+  }
+
+  .title {
+    position: relative;
+    h1 {
+      position: absolute;
+      top: 120px;
+      left: -60px;
+    }
+    @media (max-width: 425px) {
+      .pic {
+        img {
+          width: 300px;
+        }
+      }
+    }
+  }
+
+  .content {
+    text-align: left;
+    sub {
+      text-transform: uppercase;
+    }
+    .secTitle {
+      margin-bottom: 40px;
+      h3 {
+        font-family: "Oswald";
+        text-transform: uppercase;
+      }
+    }
+    .desc {
+      p {
+        margin-bottom: 30px;
+      }
+      p.bold {
+        font-weight: 500;
+      }
+    }
+  }
+}

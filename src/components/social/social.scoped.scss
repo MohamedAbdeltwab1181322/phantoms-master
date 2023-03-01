@@ -1,0 +1,41 @@
+a.social-link[class*="facebook"] {
+  background-color: #3b5998;
+}
+a.social-link[class*="google"] {
+  background-color: #d13f2d;
+}
+a.social-link[class*="pinterest"] {
+  background-color: #cb2027;
+}
+a.social-link[class*="twitter"] {
+  background-color: #44ccf6;
+}
+a.social-link[class*="youtube"] {
+  background-color: #ce332d;
+}
+a.social-link {
+  font-size: 14px;
+  color: #ffffff;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  border-radius: 3px;
+  box-shadow: inset 0 -2px 0 rgba(26, 26, 26, 0.3);
+
+  &:hover {
+    box-shadow: inset 0 -24px 0 rgba(26, 26, 26, 0.2);
+  }
+}
+.icon {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1;
+}
+a {
+  transition: all 0.3s ease-in-out;
+  color: #fa311f;
+  text-decoration: none;
+  background-color: transparent;
+  margin: 5px;
+}

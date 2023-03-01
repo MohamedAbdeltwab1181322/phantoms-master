@@ -1,0 +1,78 @@
+@import "../../styles/mixins";
+@import "../../styles/colors";
+
+section.next-game {
+  background: center url("../../assets/pics/home05.jpg");
+  background-size: cover;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  .content {
+    margin: auto 0;
+  }
+
+  h2,
+  .row {
+    margin: 30px 0;
+  }
+
+  @include Hero("dark");
+
+  h2 {
+    font-family: "Oswald";
+  }
+  @media (max-width: 1100px) {
+    //
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .row.center {
+    justify-content: center;
+  }
+
+  .teams {
+    h1.vs {
+      font-family: "Oswald";
+      font-size: 144px;
+      opacity: 0.2;
+    }
+  }
+  .time,
+  #buy {
+    margin: 0 50px;
+  }
+  .time {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    span.sep {
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      margin: 0 15px;
+      background-color: $primary;
+      animation: flickerAnimation 2s infinite;
+    }
+  }
+}
+
+@keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.2;
+  }
+  60% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
